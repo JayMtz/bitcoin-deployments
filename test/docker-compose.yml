@@ -1,0 +1,15 @@
+services:
+  bitcoin-core-prod:
+    image: ruimarinho/bitcoin-core:23.0
+    ports:
+      - "18332:18332"
+      # need to see if this port is correct on non regtest chains
+      - "18444:18444"
+    volumes:
+      - /Users/ben/.bitcoin:/home/bitcoin/.bitcoin
+    command: [
+      -printtoconsole,
+      # The bitcoin test blockchain. Other peers, no real money.
+      -testnet,
+      -rpcbind=0.0.0.0,
+    ]

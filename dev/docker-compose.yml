@@ -1,0 +1,19 @@
+services:
+  bitcoin-core-regtest:
+    image: ruimarinho/bitcoin-core:23.0
+    ports:
+      - "18443:18443"
+      - "18444:18444"
+    volumes:
+      - /Users/ben/.bitcoin:/home/bitcoin/.bitcoin
+    command: [
+      -printtoconsole,
+      # Regression test creates an empty private blockchain to test with.
+      -regtest=1,
+      -rpcallowip=0.0.0.0/0,
+      # What IP addresses this node will listen for requests at. 0.0.0.0 -> any address in the docker container.
+      # An example of an IP address of the docker container is 172.18.0.2
+      -rpcbind=0.0.0.0,
+      # {user}:{salt}${hash}
+      -rpcauth=root:417896ff8acb882720d8763627b1a166$$35a9d99b2eee60b77c50036d3fdafe4d96ea70ed7a17e46b57c36ba4bee91bc4,
+    ]

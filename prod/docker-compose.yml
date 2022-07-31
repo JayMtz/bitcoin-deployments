@@ -1,0 +1,13 @@
+services:
+  bitcoin-core-prod:
+    image: ruimarinho/bitcoin-core:23.0
+    ports:
+      - "8332:8332"
+      # need to see if this port is correct on non regtest chains
+      - "18444:18444"
+    volumes:
+      - /Users/ben/.bitcoin:/home/bitcoin/.bitcoin
+    command: [
+      -printtoconsole,
+      -rpcbind=0.0.0.0,
+    ]
