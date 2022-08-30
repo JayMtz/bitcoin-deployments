@@ -5,7 +5,7 @@ services:
       - "18443:18443"
       - "18444:18444"
     volumes:
-      - /Users/ben/.bitcoin:/home/bitcoin/.bitcoin
+      - /Users/benjaminhunt/.bitcoin:/home/bitcoin/.bitcoin
     command: [
       -printtoconsole,
       # Regression test creates an empty private blockchain to test with.
@@ -15,5 +15,5 @@ services:
       # An example of an IP address of the docker container is 172.18.0.2
       -rpcbind=0.0.0.0,
       # {user}:{salt}${hash}
-      -rpcauth=root:417896ff8acb882720d8763627b1a166$$35a9d99b2eee60b77c50036d3fdafe4d96ea70ed7a17e46b57c36ba4bee91bc4,
+      -rpcauth=root:c444343674e9a0c46e45be05ff12f693$$aeb69b2db0c45f2c905a3cc739e7cfbf18f36405cb00834b7a43bf0ee4cef24b
     ]
