@@ -26,12 +26,14 @@ First we need to generate the credentials that will be used in the http requests
 ❯ curl -sSL https://raw.githubusercontent.com/bitcoin/bitcoin/master/share/rpcauth/rpcauth.py | python3 - <username>
 ```
 ```
-String to be inserted into docker-compose.yml
+# String to be inserted into docker-compose.yml
+# You have to add an additional '$' as an escape character where you see a '$' in the following string:
 rpcauth=foo:7d9ba5ae63c3d4dc30583ff4fe65a67e$9e3634e81c11659e3de036d0bf88f89cd169c1039e6e09607562d54765c649cc
 
-Your password:
+# Your password:
 qDDZdeQ5vw9XXFeVnXT4PZ--tGN2xNjjR4nrtyszZx0=
 ```
+
 In the directory of the environment that you are deploying against run:
 
 `docker-compose up`
