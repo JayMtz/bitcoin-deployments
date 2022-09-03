@@ -5,7 +5,7 @@ services:
       - "18443:18443"
       - "18444:18444"
     volumes:
-      - /Users/benjaminhunt/.bitcoin:/home/bitcoin/.bitcoin
+      - ${HOME}/.bitcoin:/home/bitcoin/.bitcoin
     command: [
       -printtoconsole,
       # Regression test creates an empty private blockchain to test with.
