@@ -17,5 +17,8 @@ services:
       # An example of an IP address of the docker container is 172.18.0.2
       -rpcbind=0.0.0.0,
       # {user}:{salt}${hash}
-      rpcauth=jayerds:3134d44673a112f04d13233176ebb284$9a14cdacc9017f6ebae0a413d94ea85f090549d2328b19457df3d82525c2b3b8    
+      -rpcauth=jayerds:24f27f823ea2576025b6aadd803e087f$$b7967009989651168bbc002f4511b3faba53362f0d62ff2daf62b63752c7a5ac    
+      
       ]
+
+      15dBtds5LQeZ6C8sKdKkfnAgQflpfr5gEWR-UwFpmds=
